@@ -47,6 +47,25 @@ int main(void) {
 		printf("Value of a : %d\n", a);
 	}
 
+	// --------------------------
+	printf("\n");
+	// --------------------------
+
+	/*
+	 * Le do...while
+	 * A la différence du while, le do...while permettera l'exécution au moins une fois
+	   des instructions avant la vérification de la condition.
+	 * La syntaxe est cependant totalement différente.
+	 * ATTENTION de ne pas oublier le ; à la fin du do...while!
+	 */
+
+	// On commence par le do
+	do {
+		// Les instructions sont dans les accolades
+		printf("Come on! Ge me for the last time a 10 : ");
+		scanf("%d", &myVar);
+	} while (myVar != 10); // La condition est déterminé à la fin avec un ;
+
 
 	return 0;
 }
