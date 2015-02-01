@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	// On affiche plusieurs variables :
 	double myOtherVar = 15;
 	char myChar = 'A';
-	printf("My lovely char is \"%c\" and my other var is %f", myChar, myOtherVar);
+	printf("My lovely char is \"%c\" and my other var is %f\n", myChar, myOtherVar);
 	/*
 	 * Ici nous avons affiché un caractère et un entier :
 		* pour afficher un caractère nous devons utiliser "%c"
@@ -35,6 +35,14 @@ int main(int argc, char *argv[]) {
 		* %e ou %E pour un affichage en scientifique
 		* ...
 	 */
+
+	/*
+	 * Enfin, il est possible d'afficher une chaîne préformattée, il suffit
+	 * de l'appeler en lieu et place de la chaîne de caractères de printf :
+	 */
+
+	char *age = "I am %d yo\n";
+	printf(age, 19);
 
 	// --------------------------------------------
 	printf("\n\n\n\n"); // On espace le tout
