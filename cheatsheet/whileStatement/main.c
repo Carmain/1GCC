@@ -3,6 +3,8 @@
 
 int main(void) {
 
+	printf(" * First example :\n");
+
 	// La boucle while permet de répéter un certain nombre de fois selon une condition
 	int myVar;
 	while (myVar != 10) { // tant que myVar est différent de 10 on va boucler
@@ -13,6 +15,8 @@ int main(void) {
 	// --------------------------
 	printf("\n");
 	// --------------------------
+
+	printf(" * Second example :\n");
 
 	/*
 	 * Deux mots clefs sont à connaitre à propos du while :
@@ -35,6 +39,7 @@ int main(void) {
 	}
 
 	printf("\n");
+	printf(" * Third example :\n");
 
 	// Un autre exemple avec le continue, regardez le résultat !
 	int a = 0;
@@ -50,6 +55,8 @@ int main(void) {
 	// --------------------------
 	printf("\n");
 	// --------------------------
+
+	printf(" * Last example :\n");
 
 	/*
 	 * Le do...while
