@@ -11,7 +11,7 @@ int main(void) {
 	}
 
 	// --------------------------
-	printf("\n\n");
+	printf("\n");
 	// --------------------------
 
 	/*
@@ -34,6 +34,18 @@ int main(void) {
 		}
 	}
 
+	printf("\n");
+
+	// Un autre exemple avec le continue, regardez le résultat !
+	int a = 0;
+	while (a != 10) {
+		a++; // On incrémente a (revient à faire a + 1)
+		if (a == 4) {
+			// Si a est égal à 4 on saute le déroulement du while
+			continue;
+		}
+		printf("Value of a : %d\n", a);
+	}
 
 
 	return 0;
