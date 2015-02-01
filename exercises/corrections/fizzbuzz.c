@@ -3,7 +3,7 @@
 #define LIMIT 100
 
 int main(void) {
-	printf("FIZZBUZZ exercise, from 1 to %d :\n", LIMIT);
+	printf("FIZZBUZZ exercise, from 1 to %d :\n\n", LIMIT);
 
 	for(int i = 1; i < LIMIT; i++) {
 		if (i % 15 == 0) {
@@ -14,10 +14,6 @@ int main(void) {
 			printf("fizz ");
 		} else {
 			printf("%d ", i);
-		}
-
-		if (i % 10 == 0) {
-			printf("\n");
 		}
 	}
 
