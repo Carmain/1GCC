@@ -1,6 +1,6 @@
  /*
   * Directives de préprocesseurs permettant d'inclure les librairies.
-  * Elles sont lues par le préprocesseur au début de la compilation
+  * Elles sont lues par le préprocesseur avant la compilation
   */
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,6 +24,5 @@ int main(void) {
 }
 
 /*
- * ATTENTION : le comportement d'une fonction, d'une fonction
- * ou d'une intération est définie entre {}
+ * ATTENTION : le comportement d'une fonction, ou d'une intération est définie entre {}
  */
