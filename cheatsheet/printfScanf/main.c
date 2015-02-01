@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+
 	/*
 	 * Le printf permet "d'imprimer" des caractères dans la console.
 	 * Le "\n" est un caractère permettant d'imprimer un retour à la ligne.
@@ -21,8 +22,8 @@ int main(int argc, char *argv[]) {
 	printf("My var is equal to %d\n", myVar); // On l'affiche avec un printf
 
 	// On affiche plusieurs variables :
-	double myOtherVar = 15;
-	char myChar = 'A';
+	double myOtherVar = 15; // Déclaration d'un nombre à virgule
+	char myChar = 'A'; // Déclaration d'un caractère
 	printf("My lovely char is \"%c\" and my other var is %f\n", myChar, myOtherVar);
 	/*
 	 * Ici nous avons affiché un caractère et un entier :
@@ -33,6 +34,7 @@ int main(int argc, char *argv[]) {
 		* %o pour imprimer en octal
 		* %x ou %X pour imprimer en héxadécimal
 		* %e ou %E pour un affichage en scientifique
+		* %s pour les tableaux de caractère termiant par /0 (nous y reviendrons)
 		* ...
 	 */
 
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]) {
 	printf(age, 19);
 
 	// --------------------------------------------
-	printf("\n\n\n\n"); // On espace le tout
+	printf("\n"); // On espace le tout
 	// --------------------------------------------
 
 	// Récupération de la saisie d'un utilisateur
