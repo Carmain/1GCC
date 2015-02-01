@@ -3,6 +3,8 @@
 
 int main(void) {
 
+	printf(" * First  example :\n");
+
 	/*
 	 * Le "if" permet de moduler le code et de donner des instruction en fonction
 	   d'un choix défini au préalable
@@ -35,6 +37,12 @@ int main(void) {
 		* !(a == b) -> a est différent de b
 	  */
 
+	// -------------------------------------------
+	printf("\n");
+	// -------------------------------------------
+
+	printf(" * Second example :\n");
+
 	/*
 	 * combinaison de conditions :
 	 * Il est possible de combiner des conditions avec l'algèbre de bool :
@@ -49,23 +57,23 @@ int main(void) {
 		printf("true statement !\n");
 	}
 
-
 	// -------------------------------------------
-	printf("\n\n");
+	printf("\n");
 	// -------------------------------------------
 
+	printf(" * Third example :\n");
 
 	// Il est aussi possible de combiner plusieurs conditions :
 	int yourAge;
 	printf("How old are you ? ");
 	scanf("%d", &yourAge);
 
-	if (yourAge > 18) { // On vérifie la condition
+	if (yourAge >= 18) { // On vérifie la condition
 		printf("Welcome in my bar!\n");
 	}
 
 	// Si la première condition ne s'est pas réalisé on lance une nouvelle condition
-	else if ((yourAge < 18) && (yourAge > 16)) {
+	else if ((yourAge < 18) && (yourAge >= 16)) {
 		printf("It's okay, you could stay!\n");
 	}
 
@@ -76,10 +84,10 @@ int main(void) {
 
 
 	// -------------------------------------------
-	printf("\n\n");
+	printf("\n");
 	// -------------------------------------------
 
-
+	printf(" * Fourth example :\n");
 
 	/*
 	 * Vu qu'il n'y a QU'UNE SEULE instruction dans chaque condition,
@@ -88,9 +96,9 @@ int main(void) {
 	printf("How old are you ? ");
 	scanf("%d", &yourAge); // La valeur de yourAge sera écrasée
 
-	if (yourAge > 18)
+	if (yourAge >= 18)
 		printf("Welcome in my bar!\n");
-	else if ((yourAge < 18) && (yourAge > 16))
+	else if ((yourAge < 18) && (yourAge >= 16))
 		printf("It's okay, you could stay!\n");
 	else
 		printf("Get out!i\n");
