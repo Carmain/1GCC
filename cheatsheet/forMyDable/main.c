@@ -16,6 +16,8 @@ int main(void) {
 	   une petite modification selon vos IDE, je vous laisse chercher la solution :)
 	 */
 
+	printf(" * Loop in C89 : \n");
+
 	// Exemple en C89 : la déclaration de i est à l'extérieur du for
 	int i; // On déclare i à L'EXTERIEUR du for
 	for (i = 0; i < 10; i ++) {
@@ -32,6 +34,8 @@ int main(void) {
 	printf("\n");
 	// -----------------------
 
+	printf(" * Loop in C99 : \n");
+
 	// Exemple en C99 : la déclaration du i est à l'intérieur du for
 	for (int j = 0; j < 10; j ++) {
 		printf("Value of i : %d\n", j);
@@ -40,6 +44,8 @@ int main(void) {
 	// -----------------------
 	printf("\n");
 	// -----------------------
+
+	printf(" * Nested for : \n");
 
 	/*
 	 * for imbriqués :
@@ -59,6 +65,8 @@ int main(void) {
 	printf("\n");
 	// -----------------------
 
+	printf(" * for like a while : \n");
+
 	/*
 	 * le for déguisé en while (Non conseillé)
 	 * On ne spécifie que la seconde condition. le for s'exécutera tant que cette dernière
@@ -73,6 +81,9 @@ int main(void) {
 	// -----------------------
 	printf("\n");
 	// -----------------------
+
+
+	printf(" * for like a while(true) : \n");
 
 	/*
 	 * le for déguisé en while(true) (non conseillé non plus)
@@ -93,20 +104,21 @@ int main(void) {
 	printf("\n");
 	// -----------------------
 
+	printf(" * while like a for : \n");
+
 	/*
 	 * Le while déguisé en for
 	 * Nous avons vu que le for demandait 3 conditions, ces dernières sont parfaitement
 	   réalisable dans un while.
+
+	 * ici nous allons au pas de 2 au lieu de 1 comme les exemples précédents
+	   += 2 revient à faire un whileVar + 2
 	 */
 
 	int whileVar = 0; // Premier élément
 	while (whileVar < 10) { // Second élément
-		printf("%d\n", whileVar);
+		printf("Value of myVar : %d\n", whileVar);
 		whileVar += 2; // Troisème élément
-		/*
-		 * ici nous allons au pas de 2 au lieu de 1 comme les exemples précédents
-		 * += 2 revient à faire un whileVar + 2
-		 */
 	}
 
 	return 0;
