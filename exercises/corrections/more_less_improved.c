@@ -17,14 +17,15 @@ int check_number(int mystery_num, int try);
 int main(void)
 {
 	srand(time(NULL));
-	int continue_game = 1;
+	int continue_game = -1;
 
 	while (continue_game) {
-		if (continue_game == 1) {
+		if (continue_game == -1) {
 			menu();
 			scanf("%d", &continue_game);
-		} else if (continue_game == 2) {
+		} else if (continue_game == 1) {
 			play(5, 0, 100);
+			continue_game = -1;
 		}
 	}
 	return 0;
@@ -53,7 +54,7 @@ int play(int lives, int min, int max)
 
 	do {
 		try = ask_number(lives, min, max);
-	} while (check_number(mystery_num, try) && lives);
+	} while (check_number(mystery_num, try) && --lives);
 
 	return 1;
 }
