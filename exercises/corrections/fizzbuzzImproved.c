@@ -5,7 +5,8 @@
 
 const char *words[] = {"%d ", "fizz ", "buzz ", "fizzbuzz "};
 
-int main(void) {
+int main(void)
+{
 	printf("FIZZBUZZ exercise, from 1 to %d :\n\n", LIMIT);
 
 	for (int i = 1; i < LIMIT; ++i) {
