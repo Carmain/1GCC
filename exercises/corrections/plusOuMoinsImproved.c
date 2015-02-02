@@ -30,11 +30,13 @@ int main(void)
 	return 0;
 }
 
+/* random : generate a random number between min and max */
 int random(int min, int max)
 {
 	return rand() % (max - min) + min;
 }
 
+/* menu : display the main menu */
 void menu()
 {
 	system(CLEAR);
@@ -43,6 +45,7 @@ void menu()
 	printf("0 - Quit\n");
 }
 
+/* play : launch the game */
 int play(int lives, int min, int max)
 {
 	int mystery_num = random(min, max);
@@ -50,15 +53,14 @@ int play(int lives, int min, int max)
 
 	do {
 		try = ask_number(lives, min, max);
-		system(CLEAR);
 	} while (check_number(mystery_num, try) && lives);
 
 	return 1;
 }
 
+/* ask_number : ask a number to the user */
 int ask_number(int lives, int min, int max)
 {
-
 	int tried = -1;
 
 	do {
@@ -69,6 +71,7 @@ int ask_number(int lives, int min, int max)
 	return tried;
 }
 
+/* check_number : check if the number is the mysterious one */
 int check_number(int mystery_num, int try)
 {
 	if (try < mystery_num) {
