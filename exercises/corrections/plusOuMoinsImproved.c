@@ -14,6 +14,7 @@ int play(int lives, int min, int max);
 int ask_number(int lives, int min, int max);
 int check_number(int mystery_num, int try);
 
+/* Ceci est le main */
 int main(void)
 {
 	srand(time(NULL));
