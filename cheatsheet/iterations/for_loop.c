@@ -74,10 +74,10 @@ int main(void) {
 	 * On ne spécifie que la seconde condition. le for s'exécutera tant que cette dernière
 	   est vraie.
 	 */
-	int myVar;
-	for(; myVar != 10 ;) {
+	int my_var;
+	for(; my_var != 10 ;) {
 		printf("Please enter the number 10 : ");
-		scanf("%d", &myVar);
+		scanf("%d", &my_var);
 	}
 
 	// -----------------------
@@ -91,13 +91,13 @@ int main(void) {
 	 * le for déguisé en while(true) (non conseillé non plus)
 	 * ATTENTION BOUCLE INFINIE! Pensez à votre condition d'arrêt
 	 */
-	int myOtherVar;
+	int my_other_var;
 	for(;;) { // Aucune condition n'est remplie, le for va tourner à l'infini!
 		printf("Please enter the number 10 for the last time : ");
-		scanf("%d", &myOtherVar);
+		scanf("%d", &my_other_var);
 
 		// On donne une possibilité d'arrêter la boucle
-		if (myOtherVar == 10) {
+		if (my_other_var == 10) {
 			break; // Comme le while, le break arrête le processus de boucle
 		}
 	}
@@ -117,10 +117,10 @@ int main(void) {
 	   += 2 revient à faire un whileVar + 2
 	 */
 
-	int whileVar = 0; // Premier élément
-	while (whileVar < 10) { // Second élément
-		printf("Value of myVar : %d\n", whileVar);
-		whileVar += 2; // Troisème élément
+	int while_var = 0; // Premier élément
+	while (while_var < 10) { // Second élément
+		printf("Value of myVar : %d\n", while_var);
+		while_var += 2; // Troisème élément
 	}
 
 	return 0;

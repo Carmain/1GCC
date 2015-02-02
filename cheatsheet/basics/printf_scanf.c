@@ -18,13 +18,13 @@ int main(int argc, char *argv[]) {
 		  un entier qui doit être retourné.
 		* /!\ Ne pas oublier de préciser quel entier doit être retourné !
 	 */
-	int myVar = 10; // On déclare notre entier
-	printf("My var is equal to %d\n", myVar); // On l'affiche avec un printf
+	int my_var = 10; // On déclare notre entier
+	printf("My var is equal to %d\n", my_var); // On l'affiche avec un printf
 
 	// On affiche plusieurs variables :
-	double myOtherVar = 15; // Déclaration d'un nombre à virgule
-	char myChar = 'A'; // Déclaration d'un caractère
-	printf("My lovely char is \"%c\" and my other var is %f\n", myChar, myOtherVar);
+	double my_other_var = 15; // Déclaration d'un nombre à virgule
+	char my_char = 'A'; // Déclaration d'un caractère
+	printf("My lovely char is \"%c\" and my other var is %f\n", my_char, my_other_var);
 	/*
 	 * Ici nous avons affiché un caractère et un entier :
 		* pour afficher un caractère nous devons utiliser "%c"
@@ -52,10 +52,10 @@ int main(int argc, char *argv[]) {
 
 	// Récupération de la saisie d'un utilisateur
 
-	int yourAge; // On déclare une variable pour récupérer l'age de l'utilisateur
+	int your_age; // On déclare une variable pour récupérer l'age de l'utilisateur
 	printf("Please, give me your age : "); // On demande gentillement :)
-	scanf("%d", &yourAge); // Le scanf récupère l'adresse de la variable
-	printf("your age : %d\n", yourAge); // On affiche la variable
+	scanf("%d", &your_age); // Le scanf récupère l'adresse de la variable
+	printf("your age : %d\n", your_age); // On affiche la variable
 
 	/*
 	 * Que se passe-il ?

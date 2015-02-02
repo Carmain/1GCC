@@ -1,7 +1,7 @@
- /*
-  * Directives de préprocesseurs permettant d'inclure les librairies.
-  * Elles sont lues par le préprocesseur avant la compilation
-  */
+/*
+ * Directives de préprocesseurs permettant d'inclure les librairies.
+ * Elles sont lues par le préprocesseur avant la compilation
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
