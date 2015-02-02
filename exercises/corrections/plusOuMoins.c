@@ -4,33 +4,52 @@
 
 #define MIN 0
 #define MAX 100
-#define LIVES 5
+#define LIVES 9
 
-int randint(int min, int max);
 void menu();
 
-int main(void) {
-	// On définit le point de départ de rand()
+int main(void)
+{
+	/* On définit le point de départ de rand() */
 	srand(time(NULL));
 
 	int menu_choice = -1;
-	while (menu_choice) {
-		if (menu_choice == -1) {
+	while (menu_choice) {				/* La boucle principale */
+		if (menu_choice == -1) {		/* Menu */
 			menu();
 			scanf("%d", &menu_choice);
-		} else if (menu_choice == 1) {
+		} else if (menu_choice == 1) {	/* Pour jouer */
+			int mystery_num = random() % (MAX - MIN) + MIN;
+			int try;
+			int lives = LIVES;
 
-		} else if (menu_choice == 2) {
+			do { /* Tant que le joueur a des vies / il n'a pas reussis */
+				printf("Try a value [%d - %d], %d lives remaining :\n", MIN, MAX, lives);
+				scanf("%d", &try);
 
+				if (try < MIN ||try > MAX) {
+					continue;
+				} else {
+					if (try < mystery_num) {
+						printf("C'est plus !\n");
+					} else if (try > mystery_num) {
+						printf("C'est moins !\n");
+					}
+					lives--;
+				}
+			} while (lives != 0 && try != mystery_num);
+
+			if (!lives) {
+				printf("You loose, mystery number was %d\n", mystery_num);
+			} else {
+				printf("Congratulations, you win !\n");
+			}
+
+			menu_choice = 0;
 		}
 	}
 
 	return 0;
-}
-
-/* randint : return a randomly generated number between min and max */
-int randint(int min, int max) {
-	return rand() % (max - min) + min;
 }
 
 /* menu : display the game menu */
@@ -38,6 +57,5 @@ void menu() {
 	printf("Welcome to + or - !\n\n");
 	printf("Please, take a seat and enjoy !\n\n");
 	printf("1 - Play alone\n");
-	printf("2 - Play with a friend\n");
 	printf("0 - Quit\n");
 }
