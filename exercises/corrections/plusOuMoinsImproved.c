@@ -83,6 +83,6 @@ int check_number(int mystery_num, int try)
 }
 
 /*
- * Entrer un nombre *valide*
+ Entrer un nombre *valide*
  * Vérifier si c'est plus ou moins
  */
