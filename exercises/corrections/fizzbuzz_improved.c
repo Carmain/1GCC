@@ -3,7 +3,7 @@
 
 #define LIMIT 100
 
-const char *words[] = {"%d ", "fizz ", "buzz ", "fizzbuzz "};
+const char *words[] = {"%d\n", "fizz\n", "buzz\n", "fizzbuzz\n"};
 
 int main(void)
 {
