@@ -8,10 +8,10 @@ int main(void) {
 	printf(" * First example :\n");
 
 	// La boucle while permet de répéter un certain nombre de fois selon une condition
-	int myVar;
-	while (myVar != 10) { // tant que myVar est différent de 10 on va boucler
+	int my_var;
+	while (my_var != 10) { // tant que myVar est différent de 10 on va boucler
 		printf("Please, give me a 10 : ");
-		scanf("%d", &myVar); // On récupère la saisie de l'utilisateur
+		scanf("%d", &my_var); // On récupère la saisie de l'utilisateur
 	}
 
 	// --------------------------
@@ -32,10 +32,10 @@ int main(void) {
 
 	while (1) {
 		printf("Please, give me another 10 : ");
-		scanf("%d", &myVar); // On récupère la saisie de l'utilisateur
+		scanf("%d", &my_var); // On récupère la saisie de l'utilisateur
 
 		// Si l'utilisateur nous donne un 10, on arrête le while
-		if (myVar == 10) {
+		if (my_var == 10) {
 			break;
 		}
 	}
@@ -72,9 +72,8 @@ int main(void) {
 	do {
 		// Les instructions sont dans les accolades
 		printf("Come on! Ge me for the last time a 10 : ");
-		scanf("%d", &myVar);
-	} while (myVar != 10); // La condition est déterminé à la fin avec un ;
-
+		scanf("%d", &my_var);
+	} while (my_var != 10); // La condition est déterminé à la fin avec un ;
 
 	return 0;
 }
