@@ -19,7 +19,7 @@ int main(void)
 			menu();
 			scanf("%d", &menu_choice);
 		} else if (menu_choice == 1) {	/* Pour jouer */
-			int mystery_num = random() % (MAX - MIN) + MIN;
+			int mystery_num = rand() % (MAX - MIN) + MIN;
 			int try;
 			int lives = LIVES;
 
