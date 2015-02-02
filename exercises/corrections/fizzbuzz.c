@@ -7,13 +7,14 @@ int main(void) {
 
 	for(int i = 1; i < LIMIT; i++) {
 		if (i % 15 == 0) {
-			printf("fizzbuzz ");
+			printf("fizzbuzz\n");
+
 		} else if (i % 5 == 0) {
-			printf("buzz ");
+			printf("buzz\n");
 		} else if (i % 3 == 0) {
-			printf("fizz ");
+			printf("fizz\n");
 		} else {
-			printf("%d ", i);
+			printf("%d\n", i);
 		}
 	}
 
