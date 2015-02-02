@@ -68,6 +68,8 @@ int main(void) {
 	// -----------------------
 
 	printf(" * for like a while : \n");
+	// ATTENTION : CETTE SECTION EST PUREMENT DEMONSTRATIVE NE PAS REPRODUIR CHEZ VOUS 
+	// SOUS PEINE DE LOURDES SANCTIONS (et de la mort d'un bébé chat à chaque itération)
 
 	/*
 	 * le for déguisé en while (Non conseillé)
