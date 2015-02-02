@@ -50,6 +50,7 @@ int play(int lives, int min, int max)
 
 	do {
 		try = ask_number(lives, min, max);
+		system(CLEAR);
 	} while (check_number(mystery_num, try) && lives);
 
 	return 1;
@@ -57,7 +58,6 @@ int play(int lives, int min, int max)
 
 int ask_number(int lives, int min, int max)
 {
-	system(CLEAR);
 
 	int tried = -1;
 
@@ -81,5 +81,3 @@ int check_number(int mystery_num, int try)
 		return 0;
 	}
 }
-
-/**/
