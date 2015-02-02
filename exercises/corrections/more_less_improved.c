@@ -11,6 +11,7 @@
 
 int random(int min, int max);
 void menu(int *menu_choice);
+void header();
 int play(int lives, int min, int max);
 int ask_number(int lives, int min, int max);
 int check_number(int mystery_num, int try);
@@ -41,19 +42,26 @@ int random(int min, int max)
 void menu(int *menu_choice)
 {
 	system(CLEAR);
-	printf("\n\n");
-	printf("                          ############################\n");
-	printf("                          #                          #\n");
-	printf("                          #   WELCOME TO + OR - :D   #\n");
-	printf("                          #                          #\n");
-	printf("                          ############################\n");
-	printf("\n\n\n");
+
+	header();
 	printf("                               1 - Play V.S. A.I.\n");
 	printf("                               0 - Quit\n");
 	printf("\n\n");
 
 	printf("                               Your choice Sir ? ");
 	scanf("%d", menu_choice);
+}
+
+/* header : display game header */
+void header()
+{
+	printf("\n\n");
+	printf("                          ############################\n");
+	printf("                          #                          #\n");
+	printf("                          #          + OR -          #\n");
+	printf("                          #                          #\n");
+	printf("                          ############################\n");
+	printf("\n\n\n");
 }
 
 /* play : launch the game */
@@ -64,6 +72,7 @@ int play(int lives, int min, int max)
 
 	system(CLEAR);
 	do {
+		header();
 		try = ask_number(lives, min, max);
 	} while (check_number(mystery_num, try) && --lives);
 
