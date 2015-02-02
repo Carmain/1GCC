@@ -1,3 +1,5 @@
+// /!\ Les parties du code non commentés sont expliqués dans d'autres tutoriels !
+
 #include <stdio.h>
 #include <stdlib.h>
 
