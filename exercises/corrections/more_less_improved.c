@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define CONSOLE_SIZE 80
 #ifdef _WIN32
 #define CLEAR "cls"
 #else
@@ -9,7 +10,7 @@
 #endif
 
 int random(int min, int max);
-void menu();
+void menu(int *menu_choice);
 int play(int lives, int min, int max);
 int ask_number(int lives, int min, int max);
 int check_number(int mystery_num, int try);
@@ -21,8 +22,7 @@ int main(void)
 
 	while (continue_game) {
 		if (continue_game == -1) {
-			menu();
-			scanf("%d", &continue_game);
+			menu(&continue_game);
 		} else if (continue_game == 1) {
 			play(5, 0, 100);
 			continue_game = -1;
@@ -38,12 +38,22 @@ int random(int min, int max)
 }
 
 /* menu : display the main menu */
-void menu()
+void menu(int *menu_choice)
 {
 	system(CLEAR);
-	printf("Welcome to + or - !\n");
-	printf("1 - Play V.S. A.I.\n");
-	printf("0 - Quit\n");
+	printf("\n\n");
+	printf("                          ############################\n");
+	printf("                          #                          #\n");
+	printf("                          #   WELCOME TO + OR - :D   #\n");
+	printf("                          #                          #\n");
+	printf("                          ############################\n");
+	printf("\n\n\n");
+	printf("                               1 - Play V.S. A.I.\n");
+	printf("                               0 - Quit\n");
+	printf("\n\n");
+
+	printf("                               Your choice Sir ? ");
+	scanf("%d", menu_choice);
 }
 
 /* play : launch the game */
@@ -52,6 +62,7 @@ int play(int lives, int min, int max)
 	int mystery_num = random(min, max);
 	int try = -1;
 
+	system(CLEAR);
 	do {
 		try = ask_number(lives, min, max);
 	} while (check_number(mystery_num, try) && --lives);
