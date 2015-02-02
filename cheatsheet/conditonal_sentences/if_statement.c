@@ -14,8 +14,8 @@ int main(void) {
 	   lance les instructions en conséquences
 	 */
 
-	int myVar = 10; // On déclare la variable
-	if (myVar == 10) { // Si myVar est égal à 10 on exécute la condition
+	int my_var = 10; // On déclare la variable
+	if (my_var == 10) { // Si myVar est égal à 10 on exécute la condition
 		// Ma condition est vraie, on passera ici
 		printf("True statement !\n");
 	} // On n'oubile pas les accolades !
@@ -52,9 +52,9 @@ int main(void) {
 		* || équivaut à OU
 	 */
 
-	int anotherVar = 10;
-	int otherVar = 3;
-	if((anotherVar > otherVar) || (otherVar == 4)) { // On combine les conditions
+	int another_var = 10;
+	int other_var = 3;
+	if((another_var > other_var) || (other_var == 4)) { // On combine les conditions
 		// On affiche le résultat si la totalité des conditions est vraie
 		printf("true statement !\n");
 	}
@@ -66,16 +66,16 @@ int main(void) {
 	printf(" * Third example :\n");
 
 	// Il est aussi possible de combiner plusieurs conditions :
-	int yourAge;
+	int your_age;
 	printf("How old are you ? ");
-	scanf("%d", &yourAge);
+	scanf("%d", &your_age);
 
-	if (yourAge >= 18) { // On vérifie la condition
+	if (your_age >= 18) { // On vérifie la condition
 		printf("Welcome in my bar!\n");
 	}
 
 	// Si la première condition ne s'est pas réalisé on lance une nouvelle condition
-	else if ((yourAge < 18) && (yourAge >= 16)) {
+	else if ((your_age < 18) && (your_age >= 16)) {
 		printf("It's okay, you could stay!\n");
 	}
 
@@ -96,11 +96,11 @@ int main(void) {
 	   il est aussi possible de synthétiser le code de la sorte :
 	 */
 	printf("How old are you ? ");
-	scanf("%d", &yourAge); // La valeur de yourAge sera écrasée
+	scanf("%d", &your_age); // La valeur de yourAge sera écrasée
 
-	if (yourAge >= 18)
+	if (your_age >= 18)
 		printf("Welcome in my bar!\n");
-	else if ((yourAge < 18) && (yourAge >= 16))
+	else if ((your_age < 18) && (your_age >= 16))
 		printf("It's okay, you could stay!\n");
 	else
 		printf("Get out!i\n");
