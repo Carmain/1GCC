@@ -31,9 +31,9 @@ int main(void)
 					continue;
 				} else {
 					if (try < mystery_num) {
-						printf("C'est plus !\n");
+						printf("Try more (+) !\n");
 					} else if (try > mystery_num) {
-						printf("C'est moins !\n");
+						printf("Try less (-) !\n");
 					}
 					lives--;
 				}
