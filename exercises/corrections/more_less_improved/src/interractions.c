@@ -80,7 +80,23 @@ int ask_try(int lives, int min, int max)
 	return try;
 }
 
-/* show__hint : announce result for user's last try */
+/* ask_mystery : ask mystery number to user 2 */
+int ask_mystery(int min, int max)
+{
+	int mystery = min - 1;
+	char str[50];
+	sprintf(str, "Player 2 - Type a number between %d and %d : ", min, max);
+
+	do {
+		header();
+		txt_ctrd(str, ' ');
+		scanf("%d", &mystery);
+	} while(mystery < min || max < mystery);
+
+	return mystery;
+}
+
+/* show_hint : announce result for user's last try */
 void show_hint(int hint) 
 {
 	if (hint == -1) {

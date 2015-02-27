@@ -7,7 +7,7 @@ int play(int lives, int min, int max, int generate_mystery)
 	if (generate_mystery) {
 		game.mystery = (rand() % max) + min;
 	} else {
-		game.mystery = 12;
+		game.mystery = ask_mystery(min, max);
 	}
 	
 	game.lives = lives;
