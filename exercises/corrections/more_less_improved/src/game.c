@@ -1,9 +1,15 @@
 #include "game.h"
 
-int play(int lives, int min, int max)
+int play(int lives, int min, int max, int generate_mystery)
 {
 	//actual_game = malloc(sizeof(struct game));
-	game.mystery = 12;
+	
+	if (generate_mystery) {
+		game.mystery = (rand() % max) + min;
+	} else {
+		game.mystery = 12;
+	}
+	
 	game.lives = lives;
 	game.min = min;
 	game.max = max;
