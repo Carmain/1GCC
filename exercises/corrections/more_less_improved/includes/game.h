@@ -1,12 +1,20 @@
 #ifndef _GAME_H
 #define _GAME_H
 
+#include "interractions.h"
+
 struct game {
+	int mystery;
 	int lives;
 	int min;
 	int max;
+	int won;
+	int last_hint;
 };
 
-int game();
+struct game game;
+
+int play(int lives, int min, int max);
+void check_try(int n);
 
 #endif
