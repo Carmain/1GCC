@@ -1,5 +1,5 @@
-#ifndef _DISPLAY_H
-#define _DISPLAY_H
+#ifndef _INTERRACTIONS_H
+#define _INTERRACTIONS_H
 
 #include <stdio.h>
 #include <stdlib.h>
