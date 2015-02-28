@@ -6,7 +6,7 @@ CFLAGS = -W -Wall -Wpedantic -Wextra -std=c99
 BUILDDIR = bin
 SRCDIR = src
 OBJDIR = bin
-INCLUDE = includes
+INCLUDE = -Iincludes
 
 SRC = $(wildcard $(SRCDIR)/*.c)
 OBJ = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRC))
