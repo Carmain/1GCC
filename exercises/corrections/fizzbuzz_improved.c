@@ -7,11 +7,11 @@ const char *words[] = {"%d\n", "fizz\n", "buzz\n", "fizzbuzz\n"};
 
 int main(void)
 {
-	printf("FIZZBUZZ exercise, from 1 to %d :\n\n", LIMIT);
+        printf("FIZZBUZZ exercise, from 1 to %d :\n\n", LIMIT);
 
-	for (int i = 1; i < LIMIT; ++i) {
-		printf(words[!(i % 3) + 2 * !(i % 5)], i);
-	}
+        for (int i = 1; i < LIMIT; ++i) {
+                printf(words[!(i % 3) + 2 * !(i % 5)], i);
+        }
 
-	return 0;
+        return 0;
 }

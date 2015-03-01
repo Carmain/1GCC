@@ -6,12 +6,12 @@
 #include "interractions.h"
 
 struct game {
-	int mystery;
-	int lives;
-	int min;
-	int max;
-	int won;
-	int last_hint;
+        int mystery;
+        int lives;
+        int min;
+        int max;
+        int won;
+        int last_hint;
 };
 
 struct game game;
