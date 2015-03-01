@@ -71,5 +71,14 @@ int main (void) {
 		{48.858352, 2.294449}
 	};
 
+	printf("\nThe coordinates of the first point is :\n"
+			"\t- Latitude : %lf\n"
+			"\t- Longitude : %lf\n"
+			"For the second point :\n"
+			"\t- Latitude : %lf\n"
+			"\t- Longitude : %lf\n",
+	second_line.start.latitude, second_line.start.longitude,
+	second_line.end.latitude, second_line.end.longitude);
+
 	return 0;
 }
