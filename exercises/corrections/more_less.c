@@ -31,9 +31,9 @@ int main(void)
 					continue;
 				} else {
 					if (try < mystery_num) {
-						printf("Try more (+) !\n");
+						printf("Try more (+) !\n\n");
 					} else if (try > mystery_num) {
-						printf("Try less (-) !\n");
+						printf("Try less (-) !\n\n");
 					}
 					lives--;
 				}
@@ -45,7 +45,7 @@ int main(void)
 				printf("Congratulations, you win !\n");
 			}
 
-			menu_choice = 0;
+			menu_choice = -1;
 		}
 	}
 
