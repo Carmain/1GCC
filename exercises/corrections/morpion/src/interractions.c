@@ -1,5 +1,11 @@
 #include "interractions.h"
 
+/* flushin : flush input buffer */
+static void flushin()
+{
+	while(getchar() != '\n');
+}
+
 /* txt_ctrd : display centered str text */
 static void txt_ctrd(char *str)
 {
@@ -73,10 +79,11 @@ struct coordonates *ask_coordonates(int player)
 	int y;
 	do {
 		char str[50];
-		sprintf(str, "Player %d - Type playing coordonates : ", player);
+		sprintf(str, "Player %d - Type playing coordonates : ", player + 1);
 		txt_ctrd(str);
 
 		scanf("%d %d", &x, &y);
+		flushin();
 	} while (x < 0 || x > 2 || y < 0 || y > 2 || !playable(x, y));
 
 	struct coordonates *coord = malloc(sizeof(struct coordonates));
@@ -93,13 +100,19 @@ void win_scr(int player)
 	
 	char str[50];
 	sprintf(str, "Congratulations Player %d, you win !\n", 	player + 1);
-
 	txt_ctrd(str);
+	
+	txt_ctrd("Press a key to quit...\n");
+	getchar();
 }
 
 /* nul_scr : display nul screen */
 void nul_scr()
 {
 	header();
-	txt_ctrd("You loose !\n");
+	
+	txt_ctrd("Equality ! Better luck next time !\n");	
+
+	txt_ctrd("Press a key to quit...\n");
+	getchar();
 }

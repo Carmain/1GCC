@@ -10,25 +10,35 @@ static int is_finish()
 		}
 	}
 
-	game.end = 1;
 	return 1;
 }
 
 /* is_winner : check if a player won */
-static void is_winner()
+static int is_winner()
 {
 	for(int i = 0; i < 3; ++i) {
-		if (game.board[0][i] == game.board[1][i] && game.board[0][i] == game.board[2][i])
-			game.winner = game.board[0][1];
-		if (game.board[i][0] == game.board[i][1] && game.board[i][0] == game.board[i][2])
+		if (game.board[0][i] != -1 && game.board[0][i] == game.board[1][i] && game.board[0][i] == game.board[2][i]) {
+			game.winner = game.board[0][i];
+			return 1;
+		}
+
+		if (game.board[i][0] != -1 && game.board[i][0] == game.board[i][1] && game.board[i][0] == game.board[i][2]) {
 			game.winner = game.board[i][0];
+			return 1;
+		}
 	}
 
-	if (game.board[0][0] == game.board[1][1] && game.board[0][0] == game.board[2][2])
+	if (game.board[0][0] != -1 && game.board[0][0] == game.board[1][1] && game.board[0][0] == game.board[2][2]) {
 		game.winner = game.board[0][0];
+		return 1;
+	}
 
-	if (game.board[0][2] == game.board[1][1] && game.board[0][2] == game.board[2][0])
+	if (game.board[0][2] != -1 && game.board[0][2] == game.board[1][1] && game.board[0][2] == game.board[2][0]) {
 		game.winner = game.board[0][2];
+		return 1;
+	}
+
+	return 0;
 }
 
 /* init_game : initialize game struct */
@@ -42,7 +52,6 @@ static void init_game(int players)
 		
 	game.players = players;
 	game.actual_player = 0;
-	game.end = 0;
 	game.winner = -1;
 }
 
@@ -60,23 +69,23 @@ int play(int players)
 {
 	init_game(players);
 
-	while(!game.end) {
+	while(1) {
 		header();
-
 		disp_board(game.board);
+
 		struct coordonates *coord = ask_coordonates(game.actual_player);
 		game.board[coord->x][coord->y] = game.actual_player;
 		free(coord);
 
-		if(is_finish())
-			is_winner();	
+		if(is_winner() || is_finish())
+			break;
 
 		++game.actual_player;
 		game.actual_player %= 2;
 	}
 
 	if (game.winner != -1)
-		win_scr((game.actual_player + 1) % 2);	
+		win_scr(game.actual_player);	
 	else 
 		nul_scr();
 
