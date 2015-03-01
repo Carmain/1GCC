@@ -12,20 +12,37 @@ static void txt_ctrd(char *str)
 	printf("%s", str);
 }
 
+/* clscr : clear console screen */
+static void clscr()
+{
+#ifdef _WIN32
+	system("cls");
+#else
+	system("clear");
+#endif
+}
+
 /* header : display program header */
 void header()
 {
-	txt_ctrd("MORPION");	
+	clscr();
+	printf("\n");
+	txt_ctrd("-------------\n");
+	txt_ctrd("|           |\n");
+	txt_ctrd("|  MORPION  |\n");
+	txt_ctrd("|           |\n");
+	txt_ctrd("-------------\n");
+	printf("\n\n");
 }
 
 /* disp_board : display actual game board */
 void disp_board(int **board)
 {
 	char str[50];
-	sprintf(str, "  0  1  2 \n");
+	sprintf(str, "  0  1  2   \n");
 	txt_ctrd(str);
 
-	sprintf(str, "  |------------\n");
+	sprintf(str, "  |------------  \n");
 	txt_ctrd(str);
 
 	for(int i = 0; i < 3; ++i) {
@@ -38,12 +55,12 @@ void disp_board(int **board)
 				line[j] = smbls[board[i][j]];
 		} 
 		
-		sprintf(str, "%d |  %c  %c  %c  |\n", i, line[0], line[1], line[2]);
+		sprintf(str, "%d |  %c  %c  %c  |  \n", i, line[0], line[1], line[2]);
 		txt_ctrd(str);
-		txt_ctrd("  |           |\n"); 
+		txt_ctrd("  |           |  \n"); 
 	}	
 	
-	sprintf(str, "  ------------|\n");
+	sprintf(str, "  ------------|  \n");
 	txt_ctrd(str);
 
 	printf("\n");

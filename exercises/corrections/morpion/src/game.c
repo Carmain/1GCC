@@ -61,6 +61,8 @@ int play(int players)
 	init_game(players);
 
 	while(!game.end) {
+		header();
+
 		disp_board(game.board);
 		struct coordonates *coord = ask_coordonates(game.actual_player);
 		game.board[coord->x][coord->y] = game.actual_player;
