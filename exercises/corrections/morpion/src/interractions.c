@@ -22,30 +22,31 @@ void header()
 void disp_board(int **board)
 {
 	char str[50];
-	sprintf(str, "  0  1  2\n");
+	sprintf(str, "  0  1  2 \n");
 	txt_ctrd(str);
 
-	sprintf(str, "  |---------\n");
+	sprintf(str, "  |------------\n");
 	txt_ctrd(str);
+
+	for(int i = 0; i < 3; ++i) {
+		char line[3];
+		
+		for(int j = 0; j < 3; ++j) {
+			if (board[i][j] < 0)
+				line[j] = '.';
+			else
+				line[j] = smbls[board[i][j]];
+		} 
+		
+		sprintf(str, "%d |  %c  %c  %c  |\n", i, line[0], line[1], line[2]);
+		txt_ctrd(str);
+		txt_ctrd("  |           |\n"); 
+	}	
 	
-	sprintf(str, "0 |%c  %c  %c |\n", '0', '0', '0');
-	txt_ctrd(str);
-	
-	sprintf(str, "  |        |\n");
+	sprintf(str, "  ------------|\n");
 	txt_ctrd(str);
 
-	sprintf(str, "1 |%c  %c  %c |\n", '0', '0', '0');
-	txt_ctrd(str);
-
-	sprintf(str, "  |        |\n");
-	txt_ctrd(str);
-
-	sprintf(str, "2 |%c  %c  %c |\n", '0', '0', '0');
-	txt_ctrd(str);
-
-	sprintf(str, "  ---------|\n");
-	txt_ctrd(str);
-
+	printf("\n");
 }
 
 /* ask_coordonates : ask for player's playing position */

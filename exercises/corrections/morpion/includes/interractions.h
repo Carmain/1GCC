@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include "game.h"
 
+static char smbls[2] = {'O', 'X'};
+
 void header();
 void disp_board(int **board);
 struct coordonates *ask_coordonates(int player);
