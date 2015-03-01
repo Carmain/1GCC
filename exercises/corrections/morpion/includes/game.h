@@ -6,16 +6,16 @@
 #include "interractions.h"
 
 struct coordonates {
-	int x;
-	int y;
+        int x;
+        int y;
 };
 
 struct game {
-	int **board;
-	int players;
-	int actual_player;
-	int end;
-	int winner;
+        int **board;
+        int players;
+        int actual_player;
+        int end;
+        int winner;
 };
 
 struct game game;

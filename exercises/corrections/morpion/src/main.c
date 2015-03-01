@@ -6,6 +6,6 @@
 
 int main(void)
 {
-	play(2);
-	return 0;
+        play(2);
+        return 0;
 }
