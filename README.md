@@ -12,8 +12,9 @@ Fiches techniques, pédagogiques et corrections des exercices vus en cours de so
  5. **L'instruction for :** : iterations/for_loop.c
 
 ###Session 2 :
- 1. **Le switch case** : conditional\_sentences/switch\_case.c
- 2. **Les structures** : advanced\_concept/structure.c
+ 1. **Le ternaire** : conditional\_sentences/ternary.c
+ 2. **Le switch case** : conditional\_sentences/switch\_case.c
+ 3. **Les structures** : advanced\_concept/structure.c
 
 ##Bonus 
 
