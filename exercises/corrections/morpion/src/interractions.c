@@ -22,14 +22,29 @@ void header()
 void disp_board(int **board)
 {
 	char str[50];
-	sprintf(str, "  0 1 2\n");
+	sprintf(str, "  0  1  2\n");
 	txt_ctrd(str);
 
-	sprintf(str, " |======\n");
+	sprintf(str, "  |---------\n");
 	txt_ctrd(str);
 	
-	sprintf(str, "0|%c %c %c|\n", '0', '0', '0');
-	txt_ctrd(str);	
+	sprintf(str, "0 |%c  %c  %c |\n", '0', '0', '0');
+	txt_ctrd(str);
+	
+	sprintf(str, "  |        |\n");
+	txt_ctrd(str);
+
+	sprintf(str, "1 |%c  %c  %c |\n", '0', '0', '0');
+	txt_ctrd(str);
+
+	sprintf(str, "  |        |\n");
+	txt_ctrd(str);
+
+	sprintf(str, "2 |%c  %c  %c |\n", '0', '0', '0');
+	txt_ctrd(str);
+
+	sprintf(str, "  ---------|\n");
+	txt_ctrd(str);
 
 }
 
