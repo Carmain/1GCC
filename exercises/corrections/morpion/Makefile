@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 
 CC = gcc
-CFLAGS = -W -Wall -Wpedantic -Wextra -std=c99
+CFLAGS = -W -Wall -Wpedantic -Wextra -std=c99 -g
 
 BUILDDIR = bin
 SRCDIR = src
